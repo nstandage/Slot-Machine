@@ -10,11 +10,15 @@ import UIKit
 
 
 
+
+
 struct SlotMachine {
+
+    
     let slotArray = ["🦊","🐸","🌟","🐬"]
     var winner = false
     var match = false
-    
+
     
     
     func randomNumber() -> Int {

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var slotOne: UILabel!
     @IBOutlet weak var slotTwo: UILabel!
     @IBOutlet weak var slotThree: UILabel!
+    let empty = ""
     
     var slot = SlotMachine()
     
@@ -22,10 +23,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.win
-        winnerOfNotLabel.text = ""
-        slotOne.text = ""
-        slotTwo.text = ""
-        slotThree.text = ""
+        winnerOfNotLabel.text = empty
+        slotOne.text = empty
+        slotTwo.text = empty
+        slotThree.text = empty
         
     }
 
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
         //resetting
         slot.match = false
         slot.winner = false
-        winnerOfNotLabel.text = ""
+        winnerOfNotLabel.text = empty
         
        // displaying text
         let pull = slot.slotPull()
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
         
         //Winner or not?
         if slot.winner == true {
-            winnerOfNotLabel.text = "JACKPOT!"
+            winnerOfNotLabel.text = "JACKPOT!!!"
             
         } else if slot.match == true {
             winnerOfNotLabel.text = "WE HAVE A MATCH!"
